@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f4f3f8">
+    <title>Task eZ — To-do list</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header id="heading-box">
+        <h1>Task<span id="ez">eZ</span></h1>
+    </header>
+
+    <main class="app-layout">
+        <nav id="sidebar" aria-label="Main navigation">
+            <button type="button" class="active" aria-current="page">Home</button>
+            <button type="button">Profile</button>
+            <button type="button">Category</button>
+            <button type="button">Settings</button>
+            <button type="button">Logout</button>
+        </nav>
+
+        <section class="task-panel" aria-labelledby="task-heading">
+            <div class="panel-heading">
+                <h2 id="task-heading">My tasks</h2>
+                <p>Add a task, then mark it complete when you’re done.</p>
+            </div>
+            <form id="task-form">
+                <label class="visually-hidden" for="task-input">Task name</label>
+                <input type="text" id="task-input" placeholder="Enter a task" maxlength="200" autocomplete="off" required>
+                <button type="submit" id="add-task-button">Add Task</button>
+            </form>
+            <ul id="task-list" aria-live="polite" aria-label="Tasks"></ul>
+        </section>
+    </main>
+</body>
+</html>
